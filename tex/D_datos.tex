@@ -1,0 +1,30 @@
+\apendice{Descripción de adquisición y tratamiento de datos}
+%La señal EMG obtenida antes del proceso de amplificación presenta un rango de amplitud de 0-10 mV (+5 a -5).
+\section{Descripción formal de los datos}
+%Tablas, imágenes, señales, secuencias de ADN…
+
+
+\begin{table}[ht]
+\begin{tabular}{|c|l|c|}
+\hline
+\textbf{Síntomas motores}                                                     & \multicolumn{1}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Ventana \\ deslizante\end{tabular}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Filtro \\ paso banda\end{tabular}} \\ \hline
+Temblor                                                                       & \begin{tabular}[c]{@{}l@{}}duración: 3 s \\ superposición: 1,5 s\end{tabular}               & \multicolumn{1}{l|}{}                                                      \\ \hline
+\begin{tabular}[c]{@{}c@{}}LID \\ (Levodopa-induced Discinesia )\end{tabular} & \begin{tabular}[c]{@{}l@{}}duración: 1 s \\ superposición: 0,5 s\end{tabular}               & 1 a 4 Hz                                                                   \\ \hline
+Bradicinesia                                                                  & \begin{tabular}[c]{@{}l@{}}duración: 5 s \\ superposición: 50\%\end{tabular}                & 1 a 3 Hz                                                                   \\ \hline
+FoG                                                                           & \begin{tabular}[c]{@{}l@{}}duración: 1 s \\ superposición: 0,5 s\end{tabular}               & \multicolumn{1}{l|}{}                                                      \\ \hline
+\end{tabular}
+\caption{Requisitos para la evaluación de síntomas motores \cite{mera2013quantitative, tzallas2014perform}}
+    \label{tab:evaluacion-sintomas}
+\end{table}
+
+
+
+\section{Descripción clínica de los datos}
+%Descripción y explicaciones clinicas del significado o interpretación de los datos.
+
+La Tabla \ref{tab:evaluacion-sintomas} es una guía de muestra los parámetros de la ventana deslizante (duración y superposición) y del filtro paso banda para caracterizar el temblor, la discinesia, la bradicinesia y FoG.
+
+\begin{itemize}
+    \item Filtro paso banda: es un tipo de filtro que permite el paso de frecuencias que se encuentran dentro de un ancho de banda determinado y atenúa aquellas localizadas fuera de ese rango.
+    \item Ventana deslizante: reducen la amplitud de las discontinuidades de los límites de la señal influyendo en el espectro de frecuencia.
+\end{itemize}

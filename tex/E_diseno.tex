@@ -1,0 +1,72 @@
+\apendice{Manual de especificación de diseño}
+
+%Si es necesario.
+
+
+%    Planos (Si procede)
+%    Diseño arquitectonico (Si procede)
+%        Diagrama de clases, diagrama de despliegue
+
+% Conexiones entre Arduino y MPU6050
+\begin{table}[ht]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.5\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{MPU6050}    & \textbf{Arduino Uno}\\
+		\toprule
+		\textbf{VCC}              & 5 V    \\
+		\textbf{GND}              & GND     \\
+        \textbf{SCL}              & SCL (A5)    \\
+        \textbf{SDA}              & SDA (A4)    \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Conexiones entre Arduino y MPU6050}
+    \label{tab:conexiones-mpu}
+\end{table}
+
+% Conexiones entre Arduino y Módulo HC-05
+\begin{table}[ht]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.5\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{HC-05}    & \textbf{Arduino Uno}\\
+		\toprule
+		\textbf{GND}              & GND    \\
+		\textbf{RXD}              & TXD     \\
+        \textbf{TXD}              & RXD    \\
+        \textbf{VCC}              & 5 V    \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Conexiones entre Arduino y Módulo HC-05}
+    \label{tab:conexiones-hc05}
+\end{table}
+
+% Conexiones entre Arduino y Módulo ESP8266 
+\begin{table}[ht]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.5\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{ESP8266}    & \textbf{Arduino Uno}\\
+		\toprule
+		\textbf{GND}              & GND    \\
+		\textbf{RXD}              & RX     \\
+        \textbf{TXD}              & TX    \\
+        \textbf{CH PD}            & 3,3 V    \\
+        \textbf{VCC}              & 3,3 V    \\
+		\bottomrule
+	\end{tabularx}
+	\caption{Conexiones entre Arduino y Módulo ESP8266}
+    \label{tab:conexiones-esp8266}
+\end{table}
+
+
+\section{Planos}
+
+Si procede
+
+\section{Diseño arquitectónico}
+
+Si procede.
+
+Diagramas de clases, diagramas de despliegue \ldots
+
