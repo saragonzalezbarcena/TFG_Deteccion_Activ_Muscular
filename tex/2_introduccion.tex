@@ -236,50 +236,54 @@ En el futuro, las aplicaciones de “telesalud” se expandirán permitiendo mej
 
 %Enumeración y resumen de todos los trabajos relacionados de interés.
 
-La existencia de dispositivos tecnológicos que cuantifican físicamente la frecuencia y la intensidad de la actividad permite analizar la progresión de la enfermedad y adaptar el tratamiento de forma individualizada. Sin embargo, muchos de ellos no llegan al mercado debido a la falta de portabilidad que dificulta su incorporación en la vida diaria del paciente y al requerimiento de un certificado de validación. Su fiabilidad depende del número de sensores empleados, su colocación en el cuerpo y del algoritmo de procesamiento empleado. 
+La existencia de dispositivos tecnológicos que cuantifican físicamente la frecuencia y la intensidad de la actividad permite analizar la progresión de la enfermedad y adaptar el tratamiento de forma individualizada. 
+
+Sin embargo, muchos de ellos no llegan al mercado debido a la falta de portabilidad que dificulta su incorporación en la vida diaria del paciente y al requerimiento de un certificado de validación. Su fiabilidad depende del número de sensores empleados, su colocación en el cuerpo y del algoritmo de procesamiento empleado. 
 
 Actualmente existen varios dispositivos capaces de monitorizar los síntomas parkinsonianos: \cite{rodriguez2022new}.
 
 \begin{enumerate}
-    \item \textbf{Kinesia 360:} el algoritmo que utiliza este dispositivo es más complejo que el de PKG, ya que analiza las señales provenientes de un acelerómetro y de un giroscopio. El sistema está compuesto por dos sensores, un dispositivo de muñeca y otro colocado en el tobillo con el objetivo de proporcionar información sobre la marcha del paciente, como por ejemplo la postura, la movilidad y el grado de temblor. Su funcionamiento se muestra en la Figura \ref{fig:kinesia360}
+    \item \textbf{Kinesia 360:} el algoritmo que utiliza este dispositivo es más complejo que el de PKG, ya que analiza las señales provenientes de un acelerómetro y de un giroscopio. El sistema está compuesto por dos sensores, un dispositivo de muñeca y otro colocado en el tobillo con el objetivo de proporcionar información sobre la marcha del paciente, como por ejemplo la postura, la movilidad y el grado de temblor. %Su funcionamiento se muestra en la Figura \ref{fig:kinesia360}
     
     La cuantificación de la bradicinesia se basa en el análisis de características específicas que proceden tanto del acelerómetro como del giroscopio. Se calcula a través de modelos de regresión lineal que están correlacionadas con las puntuaciones UPDRS de los médicos (de 0 a 4), de forma que permite calificar la gravedad de los síntomas. Igualmente, el algoritmo empleado para evaluar la discinesia también se basa en un modelo de regresión lineal \cite{heldman2012automated, piromalis2021commercially}.
 
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[width=0.75\textwidth]{img/kinesia360.png}
-        \caption{Funcionamiento del dispositivo Kinesia 360 \cite{website:glneurotech}.}
-        \label{fig:kinesia360}
-    \end{figure}
+    %\begin{figure}[ht]
+    %    \centering
+    %    \includegraphics[width=0.75\textwidth]{img/kinesia360.png}
+    %    \caption{Funcionamiento del dispositivo Kinesia 360 \cite{website:glneurotech}.}
+    %    \label{fig:kinesia360}
+    %\end{figure}
     
-    \item \textbf{Personalized Kinetigraph, PKG:} se trata de un biosensor de muñeca (reloj PKG) como se muestra en la Figura \ref{fig:PKG}, diseñado para registrar los movimientos continuamente y cuantificar los temblores, la bradicinesia y la discinesia de los pacientes. Se coloca en la muñeca del lado del cuerpo más afectado. 
+    \item \textbf{Personalized Kinetigraph, PKG:} se trata de un biosensor de muñeca (reloj PKG)% como se muestra en la Figura \ref{fig:PKG}, 
+    diseñado para registrar los movimientos de manera continua y cuantificar los síntomas motores prinicipales que caracterizan la enfermedad de Parkinson, los temblores, la bradicinesia y la discinesia. El dispositivo se coloca en la muñeca del lado del cuerpo que se encuentra más afectado. 
 
     El sistema se basa en el análisis de las señales que provienen de un acelerómetro triaxial colocado en el reloj PKG. Las señales se filtran incluyendo frecuencias entre 0.2 Hz a 4 Hz para obtener dos índices, la aceleración máxima  y el tiempo sin movimiento. Estos valores se corresponden con la bradicinesia y la discinesia, y son registrados cada dos minutos desde el momento en que se coloca el dispositivo hasta que se retira.
 
     El algoritmo reconoce la bradicinesia como la cantidad de movimientos disminuida que, en comparación con los movimientos normales, se realizan con menor aceleración y amplitud, y con intervalos más largos entre movimientos. Por otra parte, la discinesia se reconoce como la presencia de movimientos con valores de aceleración y amplitud normales pero con periodos cortos sin movimiento
     \cite{griffiths2012automated, website:pkgcare,  santiago2019qualitative}.
 
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[width=0.35\textwidth]{img/PKG.jpg}
-        \caption{Dispositivo Personalized Kinetigraph,PKG \cite{website:pkgcare}.}
-        \label{fig:PKG}
-    \end{figure}
+    %\begin{figure}[ht]
+    %    \centering
+    %    \includegraphics[width=0.35\textwidth]{img/PKG.jpg}
+    %    \caption{Dispositivo Personalized Kinetigraph,PKG \cite{website:pkgcare}.}
+    %    \label{fig:PKG}
+    %\end{figure}
     
     
-    \item \textbf{PD Monitor:} se trata de un sistema de monitorización domiciliaria no invasivo (Figura \ref{fig:PDMonitor}). Está compuesto por cinco dispositivos portátiles de monitoreo para caracterizar todos los síntomas motores de un paciente que provienen de cualquier parte del cuerpo, una aplicación móvil que registra información referida a la medicación, evaluación de síntomas motores y una herramienta que muestra de forma gráfica la información. Emplea un algoritmo basado en técnicas de maching learning.
+    \item \textbf{PD Monitor:} se trata de un sistema de monitorización domiciliaria no invasivo . % (Figura \ref{fig:PDMonitor}) 
+    Está compuesto por cinco dispositivos portátiles de monitoreo para caracterizar todos los síntomas motores de un paciente que provienen de cualquier parte del cuerpo, una aplicación móvil que registra información referida a la medicación, evaluación de síntomas motores y una herramienta que muestra de forma gráfica la información. Emplea un algoritmo basado en técnicas de maching learning. 
 
     Cada uno de los dispositivos de monitoreo presenta un sensor IMU de 9 grados (acelerómetro, giroscopio y magnetómetro) con una frecuencia de muestreo de 59,5 Hz. A través de unos accesorios se fijan al cuerpo del paciente. Los datos recogidos por los dispositivos se transfieren al PDMonitor Smartbox y, posteriormente a la Nube estando disponibles para los médicos.
     La confguración habitual consiste en colocar dos sensores en las piernas, dos en las muñecas y uno en el torso aunque se puede emplear una configuración de dos o tres sensores (pierna, muñeca y torso). De esta manera, no es necesario seleccionar la parte del cuerpo más afectada. 
     
     El sistema se basa en el análisis de las señales del acelerómetro y del giroscopio y se calculan unas determinadas medidas para identificar la posición exacta de cada sensor, así como para discriminar el lado izquierdo o derecho \cite{kostikis2020body}.
 
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[width=0.4\textwidth]{img/PDMonitor.jpg}
-        \caption{Componentes del dispositivo PD Monitor \cite{website:pdneurotechnology}.}
-        \label{fig:PDMonitor}
-    \end{figure}
+   % \begin{figure}[ht]
+   %     \centering
+   %     \includegraphics[width=0.4\textwidth]{img/PDMonitor.jpg}
+   %     \caption{Componentes del dispositivo PD Monitor \cite{website:pdneurotechnology}.}
+   %     \label{fig:PDMonitor}
+   % \end{figure}
 
     \item \textbf{Sistema REMPARK}: El proyecto REMPARK (\textit{Personal Health Device for the Remote and Autonomous Management of Parkinson's Disease}) tiene por objetivo es desarrollar un sistema de monitorización portátil para identificar el estado motor en tiempo real y evaluar el estado ON/OFF/Discinesia a través de la aplicación de métodos de Inteligencia Artificial.
 
@@ -289,25 +293,25 @@ Actualmente existen varios dispositivos capaces de monitorizar los síntomas par
 
     Por otra parte, cuando el paciente presenta discinesia  el espectro de potencia de las frecuencias más bajas aumenta. Se consideró el rango del espectro de potencia de la banda de frecuencias de 1 a 4 Hz para detectar discinesia siempre que las frecuencias más altas (8 a 20 Hz) no presenten un espectro de potencia alto que representan actividades como caminar o subir escaleras \cite{perez2016dopaminergic}.
     
-    
-    \item \textbf{STAT-ON}: como se puede observar en la Figura \ref{fig:staton}, es un dispositivo portátil que incluye un sensor y se coloca en un cinturón alrededor del paciente permitiendo registrar el estado motor de los pacientes  como bradicinesia, discinesia, fluctuaciones ON/OFF que aparecen en el Parkinson avanzado o caídas entre otros. 
+    % como se puede observar en la Figura \ref{fig:staton}, es un
+    \item \textbf{STAT-ON}: dispositivo portátil que incluye un sensor y se coloca en un cinturón alrededor del paciente permitiendo registrar el estado motor de los pacientes  como bradicinesia, discinesia, fluctuaciones ON/OFF que aparecen en el Parkinson avanzado o caídas entre otros. 
 
     Internamente, el sistema se compone de dos nano-acelerómetros triaxiales ultrabajos, dos microcontroladores y un sistema Bluetooth de baja energía (BLE). nRF51822 es el microcontrolador principal, maneja los procesos internos e incorpora el sistema BLE. El segundo microcontrolador es el  STM32F415, encargado de operar modelos matemáticos complejos como los clasificadores SVM (\textit{Support Vector Machines}) y calcular las señales proporcionadas por el acelerómetro principal.
 
     El sistema emplea varios algoritmos para detectar bradicinesia, discinesia y estados ON/OFF. Además, se incorporó el algoritmo FoG (\textit{Freezing of Gait}) que se basa en un enfoque de aprendizaje automático basado en SVM. El objetivo del conjunto algorítmico es identificar y registrar los estados ON y OFF que dependen de un umbral \textit{Beta} obtenido a partir del clasificador SVM y de la detección de los síntomas de discinesia inducidos por levodopa.  
     
-    El profesional sanitario configurará el dispositivo únicamente con tres parámetros cruciales para los algoritmos de estimación de la marcha y bradicinesia. Su empleo está destinado  para entornos domésticos,  durante la realización de actividades de la vida diaria. Los resultados obtenidos se muestran de forma gráfica en una aplicación móvil
+    Su empleo está destinado para entornos domésticos,  durante la realización de actividades de la vida diaria. Los resultados obtenidos se muestran de forma gráfica en una aplicación móvil
     \cite{rodriguez2022new}.
 
-    \begin{figure}[ht]
-        \centering
-        \includegraphics[width=0.7\textwidth]{img/staton-holter.png}
-        \caption{Dispositivo STAT-ON \cite{rodriguez2022new}.}
-        \label{fig:staton}
-    \end{figure}
+   % \begin{figure}[ht]
+   %     \centering
+   %     \includegraphics[width=0.7\textwidth]{img/staton-holter.png}
+   %     \caption{Dispositivo STAT-ON \cite{rodriguez2022new}.}
+   %     \label{fig:staton}
+   % \end{figure}
 \end{enumerate}
 
-Por otra parte, los avances tecnológicos permiten el continuo desarrollo de nuevos dispositivos dirigidos a mejorar la adquisición e interpretación de señales con el fin de caracterizar los síntomas motores y analizar la evolución de dichos pacientes. A continuación, se muestran algunos ejemplos:
+Por otra parte, los avances tecnológicos permiten el continuo desarrollo de nuevos dispositivos dirigidos a mejorar la adquisición e interpretación de señales con el fin de caracterizar los síntomas motores y analizar la evolución de dichos pacientes. A continuación, se muestran algunos estudios realizados:
 
 \begin{enumerate}
     \item Se ha diseñado un sistema portable que obtiene señales eléctricas de la actividad muscular (EMG) de forma simultánea e inalámbrica a partir de las medidas extrínsecas de los síntomas motores parkinsonianos, aceleración, par y velocidad de golpeteo.  Estas medidas se han obtenido empleando un acelerómetro, un dinamómetro y una computadora que administra una prueba de toque con el dedo, respectivamente. 
@@ -333,7 +337,21 @@ Por otra parte, los avances tecnológicos permiten el continuo desarrollo de nue
     Una vez obtenidos los datos, son procesados en el microcontrolador integrado para calcular los parámetros necesarios para evaluar la marcha y el movimiento.
 
     El Servicio mHealth establece la comunicación y transferencia de datos entre las aplicaciones móviles y la plataforma en la nube a través de Internet cumpliendo protocolos de seguridad \cite{gatsios2020feasibility}.
+
+    \item Por último, cabe destacar un estudio enfocado en el análisis de datos provenientes de sensores que medían el movimiento de las extremidades superiores e inferiores para mejorar el reconcimiento automático de la enfermedad de Parkinson. Se utilizó la escala UPDRS - Parte III para obtener resultados comparables del estado motor.
+
+    Para ello, fue necesario un bolígrafo inteligente biométrico que registrase la función motora de la mano y, al igual que los anteriores dispositivos, se emplearon acelerómetros y giroscopios para medir la velocidad angular y la aceleración y, de esta forma, analizar la marcha del sujeto.
+
+    Para la recopilación de datos, los sujetos se sometieron a diversas pruebas de función motora y de marcha estandarizadas. Las señales adquiridas sufrieron un preprocesamiento y se empleó un filtro de paso bajo Chebyshev para eliminar el ruido.
+
+    En concreto, las características biométricas de la marcha se extrajeron de los datos de los sensores ubicados en los zapatos del sujeto y se calcularon a partir de pasos individuales y secuencias de marcha de caminata de 10 minutos, secuencias de golpecitos en el talón y la punta del pie, dando vueltas y, a partir de la transformada de Fourier.
+
+    Posteriormente, se analizaron y compararon dos métodos para seleccionar las características y la clasificación se realizó empleando  el análisis discriminante lineal (LDA), SVM con un kernel lineal y AdaBoost, cuya precisión se calculó mediante LOSOCV (\textit{la validación cruzada de dejar un sujeto fuera})  \cite{barth2012combined}. 
+
 \end{enumerate}
+
+Los resultados de estos estudios sirven de base para ofrecer herramientas de apoyo a los médicos y, así mejorar la atención clínica. 
+
 
 
 
