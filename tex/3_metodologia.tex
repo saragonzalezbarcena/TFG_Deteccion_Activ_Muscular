@@ -6,9 +6,9 @@
 
 Este apartado resume el análisis de las señales obtenidas por medio del uso de dos sensores inerciales, un acelerómetro y un giroscopio, cuyos parámetros están correlacionados con los síntomas motores parkinsonianos y, de esta forma, ofrecer información relevante a la hora de detectar la discinesia y la bradicinesia entre otros. 
 
-Una vez se han adquirido las señales, se deberán filtrar para eliminar el ruido y, así evitar que interfiera en la calidad. Se procederá a la selección y extracción de características que representen las distintas actividades motoras mediante el uso de filtros paso banda y ventanas deslizantes, cuyos parámetros se definirán en base a estudios realizados y los empleados en el diseño del dispositivo KinetiSense \cite{mera2013quantitative}, el sistema PERFORM \cite{tzallas2014perform} tanto para el acelerómetro como para el giroscopio. 
+Previamente, las señales sufrirán un preprocesado para corregir posibles errores como la eliminación de ruido mediante filtros paso banda y, así evitar que interfiera en la calidad de la señal. Se procederá a la selección y extracción de características para establecer indicadores biomecánicos que representen las distintas afectaciones motoras en base a los resultados obtenidos.
 
-Asimismo, los resultados obtenidos son introducidos como parámetros de entrada en diferentes algoritmos de clasificación (Regresión logística, SVM, Random forest, AdaBoost), los cuales serán comparados para establecer el algoritmo que garantice la correcta clasificación de cada uno de los síntomas motores.
+Asimismo, los resultados obtenidos son introducidos como parámetros de entrada en diferentes algoritmos de clasificación (Regresión logística, SVM, Random forest), los cuales serán comparados para establecer el algoritmo que garantice la correcta clasificación de cada uno de los síntomas motores.
 
 
 En el \textit{Anexo Descripción de adquisición y tratamiento de datos} se explica de forma detallada las características de las señales que devuelven los acelerómetros y los giroscopios, así como la presencia de tablas que muestren los parámetros de los filtros pasa banda y de las ventanas deslizantes empleados para caracterizar los síntomas parkinsonianos. 
@@ -62,7 +62,7 @@ Además, la comunicación puede realizarse tanto por SPI como por bus I2C. La te
 
 Para realizar la lectura del sensor MPU6050, se emplearán dos biblioteca de Arduino desarrolladas por Jeff Rowberg \cite{website:github.com/jrowberg}, una para MPU6050 y una segunda para la comunicación I2C.
 
-Por otra parte, se ha valorado el empleo de módulos Bluetooth y WiFi para que los resultados sean enviados al servidor web para su posterior análisis.
+Por otra parte, se ha valorado el empleo de módulos Bluetooth y WiFi con el fin de almacenar los datos y que su visualizacion sea sencilla para el profesional sanitario.
 
 \begin{itemize}
     \item Módulo HC-05: como se muestra en la Figura \ref{fig:HC-O5}, módulo Bluetooth es de pequeño tamaño, el cual permite conectar de forma sencilla un Arduino por Bluetooth y es capaz de recibir e iniciar comunicaciones, a diferencia del módulo Hc-06.
@@ -95,7 +95,6 @@ Los algoritmos que mayormente se han empleando para la clasificación de activid
     \item Regresión logística: algoritmo utilizado ampliamente por su simplicidad para predecir la probabilidad de que un evento que tiene un resultado dictómico (binario) esté relacionado con un conjunto de variables \cite{muniz2010comparison}. 
     \item SVM (Support Vector Machine): algoritmo que define un límite de decisión (hiperplano) que divide de forma óptima dos clases al maximizar la distancia entre ellas.  Busca los vectores de soporte  que ofrezcan el mejor hiperplano de separación empleando una función kernel \cite{bourouhou2016comparison}.
     \item Random Forest: algoritmo supervisado capaz de realizar tareas de regresión y clasificación. Consiste en ejecutar varios algoritmos de árbol de decisiones, en el que cada uno da una clasificación. La decisión final será aquella que aparezca más veces \cite{liaw2002classification}.
-	\item AdaBoost:
 \end{enumerate}
 
 
